@@ -1,0 +1,34 @@
+<h1>
+    Crew Listesi
+</h1>
+
+<table border=1 [ngStyle]="{'width':'100%', border:1}">
+    <tr>
+        <th>
+            İşlemler
+        </th>
+        <th>
+            İsim
+        </th>
+        <th>
+            Soyisim
+        </th>
+        <th>
+            Yaş
+        </th>
+
+
+    </tr>
+
+    <tr *ngFor="let item of crews">
+        <td>
+            <button (click)="sil(item.id)">Sil</button>
+            <button (click)="duzenle(item.id)">Düzenle</button>
+            <button (click)="detay(item.id)">Detay</button>
+        </td>
+        <td>{{item.name}}</td>
+        <td>{{item.surname}}</td>
+        <td>{{item.age}}</td>
+
+    </tr>
+</table>
